@@ -1,6 +1,11 @@
 ###
 # Compass
 ###
+#
+["anne", "seb", "romain"].each do |name|
+  proxy "/flats/#{name}.html", "/flats/show.html", :locals => { :owner => name }, :ignore => true
+end
+
 
 # Change Compass configuration
 # compass_config do |config|
@@ -49,6 +54,10 @@ activate :autoprefixer
 #     "Helping"
 #   end
 # end
+#
+activate :blog do |blog|
+  # set options on blog
+end
 
 set :css_dir, 'stylesheets'
 

@@ -1,0 +1,70 @@
+<!-- Read from data.flats with owner's name as key -->
+
+ <% flat = data.flats[owner] %>
+
+<div class="container">
+
+
+  </div>
+
+
+  <div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+      <!-- No nesting here -->
+      <div class="flat-left">
+          <h1>Welcome home !</h1>
+          <%= image_tag flat.owner_picture, class: "img-circle avatar-xlarge" %>
+          <p><%= flat.owner_name %></p>
+          <h1><%= flat.description %></h1>
+          <p><%= flat.city %></p>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <!-- Here we nest two rows -->
+      <div class="row">
+        <div class="flat-right">
+        <h1>Book this Flat !</h1>
+          <!-- A first one with two cols -->
+          <div class="col-sm-6">
+
+            <input type="Checkin" class="form-control" placeholder="Checkin">
+
+
+          </div>
+
+          <div class="col-sm-6">
+            <input type="Checkout" class="form-control" placeholder="Checkout">
+
+
+          </div>
+
+      <div class="row">
+        <!-- A second one with just one col -->
+
+        <div class="col-sm-12">
+        <select class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+        </div>
+        <div class="col-sm-12">
+            <button type="submit" class="btn btn-default">Sign in</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+</div>
